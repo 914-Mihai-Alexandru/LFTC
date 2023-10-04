@@ -1,0 +1,61 @@
+// p1: compute the maximum of 3 numbers:
+
+let a, b, c;
+
+a = parseInt();
+b = parseInt();
+c = parseInt();
+
+let d = a;
+
+if (b > d):
+	d = b;
+
+if (c > d):
+	d = c;
+
+print(d);
+
+
+// p2: verify if a number is prime:
+
+let num;
+let d = 2;
+let prime = true;
+
+num = parseInt();
+
+while (d * d <= num && prime is true):
+	if (num % d == 0):
+		prime = false;
+
+	d = d + 1;
+
+if (prime is true):
+	print("The give number is prime.");	
+else:
+	print("The given number is NOT prime.");
+
+
+// p3: the sum of n numbers:
+
+let num = parseInt();
+let sum = 0;
+let index = 1;
+while (index <= num):
+	sum = sum + parseInt();	
+	index = index + 1;
+
+print(sum);
+
+
+// p1err: verify if a number is prime
+
+let num = parseInt() // no semicolon - syntax error
+sum = 0; // no "let" for declaring/defining variable - syntax error
+let index@ = 1; // the identifier is incorrect, it contains special characters - syntax error
+while (index <= num) { // there should be a colon instead of the semibrackets - syntax error
+	sum = sum + parseInt();	
+	index = index + 1;
+}
+print(sum);
