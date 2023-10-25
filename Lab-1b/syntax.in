@@ -1,5 +1,5 @@
-program = {statement}
-statement = (let_statement|arr_statement|assign_statement|if_statement|while_statement|return_statement|function_call_statement) ";"
+program = {statement} | {program statement}
+statement = (let_statement|arr_statement|assign_statement|if_statement|while_statement|return_statement|function_call_statement) ";" 
 let_statement = "let" identifier_list
 arr_statement = "arr" "<" positive_number ">" pure_identifier_list
 pure_identifier_list = identifier {"," identifier}
@@ -15,3 +15,5 @@ while_statement = "while" "(" condition ")" ":" {statement}
 return_statement = "return" expression
 function_call_statement = function_name "(" expression_list? ")"
 function_name = "print" | "set_nth" | "get_nth" | "parseInt" | "parseString"
+
+
