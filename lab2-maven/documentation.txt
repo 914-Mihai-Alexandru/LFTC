@@ -1,0 +1,20 @@
+I chose to use a HashTable to implement the SymbolTable, serving both the identifiers and constants. This HashTable is structured as a list within a list.
+
+Here's how my hash function works:
+- It calculates the sum of the ASCII values of the characters in the element.
+- Then, it divides this sum by the size of the SymTable, which is determined before the program runs.
+
+If there's a collision (two elements having the same key), the new element is added to the end of the list at that position.
+
+Additionally, I created a helper class named "Pair," which takes two integers. This class helps me track the position of an element in the SymTable. The first integer indicates the hashed position of the element in the main list, while the second one represents the position of the element in the sublist, which contains elements with the same hash.
+
+The HashTable includes the following methods:
+
+- Constructor: It initializes the list of lists used to store elements based on a given size.
+- Add: This method is used when adding a new element to the SymTable.
+- FindByPos: It helps me retrieve elements from a specific position. For instance, position (1,2) represents the second list in the main list and the third element in the sublist.
+- GetSize: This method returns the size of the HashTable.
+- FindPositionOfTerm: It returns the position of a given element.
+- Hash: Calculates the hash according to the method described above.
+- Contains: This method checks the existence of a given element in the Table and returns true or false.
+- ToString: It returns the table in a formatted way, making it easier to visualize.
